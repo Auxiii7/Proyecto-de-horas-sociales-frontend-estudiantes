@@ -1,11 +1,8 @@
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import LoginPage from './pages/LoginPage';
-import MapaVistaPage from './pages/MapaVistaPage';
 import { InstitucionesPage, InstitucionDetallePage } from './pages/InstitucionesPage';
 import { ProyectosPage, ProyectoDetallePage } from './pages/ProyectosPage';
-import EstudiantesPage from './pages/EstudiantesPage';
-import DashboardPage from './pages/DashboardPage';
 
 function Shell({ activePage }: { activePage: string }) {
   return (
@@ -13,14 +10,11 @@ function Shell({ activePage }: { activePage: string }) {
       <Header activePage={activePage} />
       <main>
         <Routes>
-          <Route path="/mapa" element={<MapaVistaPage />} />
           <Route path="/instituciones" element={<InstitucionesPage />} />
           <Route path="/instituciones/:id" element={<InstitucionDetallePage />} />
           <Route path="/proyectos" element={<ProyectosPage />} />
           <Route path="/proyectos/:id" element={<ProyectoDetallePage />} />
-          <Route path="/estudiantes" element={<EstudiantesPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
-          <Route path="*" element={<Navigate to="/mapa" replace />} />
+          <Route path="*" element={<Navigate to="/login/estudiante" replace />} />
         </Routes>
       </main>
     </div>

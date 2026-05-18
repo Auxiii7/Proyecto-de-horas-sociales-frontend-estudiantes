@@ -3,11 +3,8 @@ import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 const navItems = [
-  { to: '/mapa', label: 'Vista de mapa' },
   { to: '/instituciones', label: 'Instituciones' },
   { to: '/proyectos', label: 'Proyectos' },
-  { to: '/estudiantes', label: 'Estudiantes' },
-  { to: '/dashboard', label: 'Dashboard' },
 ];
 
 export default function Header({ activePage }: { activePage: string }) {

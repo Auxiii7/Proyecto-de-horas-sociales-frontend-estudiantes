@@ -11,7 +11,7 @@ export default function LoginPage({ tipo }: { tipo: 'docente' | 'estudiante' }) 
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (email && password) navigate('/mapa');
+    if (email && password) navigate('/instituciones');
   };
 
   const isDocente = tipo === 'docente';

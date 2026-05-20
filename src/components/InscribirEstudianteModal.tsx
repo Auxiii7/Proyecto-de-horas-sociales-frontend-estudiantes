@@ -40,7 +40,7 @@ export default function InscribirEstudianteModal({
             Cancelar
           </button>
           <button className="primary-btn" type="submit">
-            Inscribir estudiante
+            Inscribirse
           </button>
         </div>
       </form>

@@ -76,14 +76,7 @@ export function InstitucionesPage() {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
-          <button
-            className="filter-action-btn"
-            type="button"
-            onClick={() => setActiveFilter((c) => (c + 1) % categorias.length)}
-          >
-            <Filter size={16} />
-            <span>Filtrar</span>
-          </button>
+          
           <button
             className="filter-action-btn"
             type="button"
@@ -165,17 +158,7 @@ function InstitutionTabs({ institution }: { institution: (typeof instituciones)[
                 value={searchQuery}
                 onChange={setSearchQuery}
               />
-              <button
-                className="secondary-btn"
-                type="button"
-                onClick={() =>
-                  setStatusFilter((c) =>
-                    c === 'Todos' ? 'Activo' : c === 'Activo' ? 'En convocatoria' : c === 'En convocatoria' ? 'Cerrado' : 'Todos'
-                  )
-                }
-              >
-                Filtrar
-              </button>
+              
             </div>
           </div>
           <div className="institution-project-grid">

@@ -43,7 +43,7 @@ export function ProjectListCard({
         </div>
         {tieneCupos ? (
           <button className="primary-btn project-enroll-btn" type="button" onClick={() => onEnroll?.(project)}>
-            Inscribir estudiante
+            Inscribirse
           </button>
         ) : (
           <div className="closed-box project-full-box">Cupos llenos</div>

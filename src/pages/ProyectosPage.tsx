@@ -61,12 +61,6 @@ export function ProyectosPage() {
       <PageHero
         title="Encuentra proyectos según tu carrera o colabora con otras áreas."
         description="Postúlate y participa en iniciativas de impacto social en todo El Salvador."
-        action={
-          <button className="primary-btn" type="button" onClick={() => setSearchParams({ nuevo: '1' })}>
-            <Plus size={18} />
-            <span>Crear nuevo proyecto</span>
-          </button>
-        }
       />
 
       <div className="chip-row">
@@ -104,16 +98,6 @@ export function ProyectosPage() {
             <span>
               Mostrando <strong>{filteredProjects.length}</strong> proyectos
             </span>
-            <button
-              className="link-button text-link"
-              type="button"
-              onClick={() =>
-                setSortBy((s) => (s === 'recentes' ? 'titulo' : s === 'titulo' ? 'ubicacion' : 'recentes'))
-              }
-            >
-              Ordenar por:{' '}
-              <strong>{sortBy === 'recentes' ? 'Más recientes' : sortBy === 'titulo' ? 'Título' : 'Ubicación'}</strong>
-            </button>
           </div>
 
           <div className="project-feed">
@@ -122,12 +106,7 @@ export function ProyectosPage() {
             ))}
           </div>
 
-          <div className="center-actions">
-            <button className="secondary-btn load-more-btn" type="button">
-              <span className="spin-dot" />
-              Cargar más proyectos
-            </button>
-          </div>
+          
         </section>
       </div>
 

@@ -1,23 +1,22 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
 
+:root {
   color-scheme: light;
-  :root {
-    color-scheme: light;
-    --bg: #f5f7fc;
-    --bg-deep: #eef2fb;
-    --surface: #ffffff;
-    --surface-soft: #f8faff;
-    --line: #dde3ef;
-    --text: #1c2433;
-    --muted: #687182;
-    --blue: #2f68ec;
-    --blue-deep: #2253c7;
-    --green: #21c08a;
-    --pink: #d9488f;
-    --shadow: 0 12px 30px rgba(18, 37, 77, 0.08);
-    font-family: 'Manrope', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  }
+  --bg: #f5f7fc;
+  --bg-deep: #eef2fb;
+  --surface: #ffffff;
+  --surface-soft: #f8faff;
+  --line: #dde3ef;
+  --text: #1c2433;
+  --muted: #687182;
+  --blue: #2f68ec;
+  --blue-deep: #2253c7;
+  --green: #21c08a;
+  --pink: #d9488f;
+  --shadow: 0 12px 30px rgba(18, 37, 77, 0.08);
+  font-family: 'Poppins', 'Manrope', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
 
   * {
     box-sizing: border-box;
@@ -163,11 +162,7 @@
     border-radius: 50%;
     font-weight: 700;
   }
-  background: var(--surface);
-  border: 1px solid var(--line);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  color: #7d8598;
-}
+
 
 /* --- Card visual overrides (aplicar fuente y estilo de la imagen) --- */
 .project-summary-topline,
@@ -3724,3 +3719,4 @@ input[type="checkbox"].check:checked {
 .modal-image-remove:hover {
   background: rgba(220, 38, 38, 0.95);
 }
+

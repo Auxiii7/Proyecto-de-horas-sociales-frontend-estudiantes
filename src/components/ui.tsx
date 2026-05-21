@@ -126,7 +126,7 @@ export function PageHero({
 }: {
   eyebrow?: string;
   title: string;
-  description: string;
+  description?: string;
   action?: ReactNode;
 }) {
   return (
@@ -135,7 +135,7 @@ export function PageHero({
       <div className="hero-copy-row">
         <div>
           <h1>{title}</h1>
-          <p>{description}</p>
+          {description ? <p>{description}</p> : null}
         </div>
         {action ? <div className="hero-action">{action}</div> : null}
       </div>

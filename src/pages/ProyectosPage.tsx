@@ -1,10 +1,10 @@
-import { ArrowRight, MapPinned, Plus } from 'lucide-react';
+import { ArrowRight, Search } from 'lucide-react';
 import { useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
 import InscribirEstudianteModal from '../components/InscribirEstudianteModal';
 import CreateProjectModal from '../components/CreateProjectModal';
 import { ProjectListCard } from '../components/ProjectCards';
-import { BackLink, FilterGroup, PageHero, SearchPanel } from '../components/ui';
+import { BackLink, FilterGroup } from '../components/ui';
 import { instituciones } from '../data/instituciones';
 import { clasificacionEstado, proyectosMapa } from '../data/proyectos';
 
@@ -58,10 +58,23 @@ export function ProyectosPage() {
 
   return (
     <div className={`directory-page wide-page ${modalNuevo ? 'modal-open' : ''}`}>
-      <PageHero
-        title="Encuentra proyectos según tu carrera o colabora con otras áreas."
-        description="Postúlate y participa en iniciativas de impacto social en todo El Salvador."
-      />
+      <header className="page-header-top">
+        <div className="title-section">
+          <h1 className="main-title">Proyectos según carrera</h1>
+        </div>
+
+        <div className="actions-section">
+          <div className="search-wrapper">
+            <Search size={18} className="search-icon-inside" />
+            <input
+              type="text"
+              placeholder="Palabras clave..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+          </div>
+        </div>
+      </header>
 
       <div className="chip-row">
         {Object.keys(facultyToMajors).map((chip) => (
@@ -78,7 +91,6 @@ export function ProyectosPage() {
 
       <div className="content-split">
         <aside className="filter-rail">
-          <SearchPanel title="Búsqueda" placeholder="Palabras clave..." value={searchQuery} onChange={setSearchQuery} />
           <FilterGroup
             title="Estado"
             options={['Todos', 'En convocatoria', 'Activo', 'En planificación', 'Cerrado']}

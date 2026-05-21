@@ -60,10 +60,6 @@ export function InstitucionesPage() {
       <div className="page-header-top">
         <div className="title-section">
           <h1 className="main-title">Instituciones Aliadas</h1>
-          <p className="main-description">
-            Explora universidades, escuelas técnicas e institutos de todo El Salvador que participan en
-            iniciativas de proyectos estudiantiles.
-          </p>
         </div>
 
         <div className="actions-section">

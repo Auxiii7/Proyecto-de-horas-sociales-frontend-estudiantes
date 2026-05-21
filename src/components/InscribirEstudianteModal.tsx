@@ -13,7 +13,7 @@ export default function InscribirEstudianteModal({
       className="modal-backdrop"
       role="dialog"
       aria-modal="true"
-      aria-label={`Inscribir estudiante en ${projectTitle}`}
+      aria-label={`Inscribirse en ${projectTitle}`}
     >
       <form className="modal-card enrollment-modal" onSubmit={(e) => {
         e.preventDefault();
@@ -21,7 +21,7 @@ export default function InscribirEstudianteModal({
       }}>
         <div className="modal-header">
           <div>
-            <h2>Inscribir estudiante</h2>
+            <h2>Inscribirse</h2>
             <p className="modal-subtitle">{projectTitle}</p>
           </div>
           <button className="icon-btn small" type="button" onClick={onClose} aria-label="Cerrar modal">

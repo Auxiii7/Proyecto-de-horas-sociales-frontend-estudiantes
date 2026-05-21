@@ -34,7 +34,7 @@ export default function Header({ activePage }: { activePage: string }) {
               `topnav-link ${isActive || activePage === item.to.slice(1) ? 'active' : ''}`
             }
           >
-            {item.label}
+            <span className="topnav-link-label">{item.label}</span>
           </NavLink>
         ))}
       </nav>
